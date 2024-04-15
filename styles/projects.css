@@ -159,7 +159,7 @@ body {
     font-size: 20px;
   }
 
-   .figure-article {
+  .figure-article {
     display: grid;
     border-radius: 1rem;
     overflow: hidden;
@@ -201,5 +201,6 @@ body {
   .comming-soon {
     font-size: 15px;
   }
-    
+}
+
 /* --MEDIA QUERIES */
