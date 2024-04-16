@@ -50,52 +50,7 @@ body {
 }
 /* --HEADER */
 
-/* MAIN-- */
-.main {
-  color: white;
-  margin-top: 100px;
-}
-
-.hero {
-  color: white;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  margin: 0 20% 0 20%;
-}
-
-.about-me {
-  font-size: 40px;
-  font-family: 'Raleway', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  margin-bottom: 20px;
-}
-
-.about-me-text {
-  font-family: 'Libre Baskerville', serif;
-  font-weight: 400;
-  font-style: italic;
-}
-/* --MAIN */
-
-/* PROJECTS-- */
-.projects {
-  margin: 70px 20% 0 20%;
-}
-
-.projects-grid {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: px;
-  grid-row-gap: 25px;
-  margin-bottom: 20px;
-}
-
+/* EXPERIMENTS */
 .h3-title {
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
@@ -105,60 +60,17 @@ body {
   color: rgb(0, 255, 179);
 }
 
-.img-project {
-  max-width: 100%;
-}
-
-.figure-article {
-  display: grid;
-  border-radius: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-  /* max-height: 90%; */
-}
-.figure-article > * {
-  grid-area: 1/1;
-  transition: 0.4s;
-}
-.figure-article .figure-figcaption {
-  display: grid;
-  align-items: end;
-  font-family: sans-serif;
-  font-size: 2.3rem;
-  font-weight: bold;
-  color: #0000;
-  padding: 0.75rem;
-  background: var(--c, #0009);
-  clip-path: inset(0 var(--_i, 100%) 0 0);
-  -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  -webkit-mask-clip: text, padding-box;
-  margin: -1px;
-}
-.figure-article:hover .figure-figcaption {
-  --_i: 0%;
-}
-.figure-article:hover img {
-  transform: scale(1.2);
-}
-@supports not (-webkit-mask-clip: text) {
-  .figure-article .figure-figcaption {
-    -webkit-mask: none;
-    color: #fff;
-  }
-}
-
-.see-more {
-  color: white;
+.comming-soon {
+  margin: 50px;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
-  font-size: 17px;
+  font-weight: 900;
+  font-size: 20px;
   font-style: normal;
+  color: white;
 }
-/* --PROJECTS */
 
-/* EXPERIMENTS */
 .experiments {
   margin: 70px 20% 0 20%;
 }
@@ -220,99 +132,8 @@ body {
 
 /* EXPERIMENTS */
 
-/* CONTACT-- */
-.contact {
-  margin: 70px 20% 40px 20%;
-}
-
-.contact-container {
-  margin-top: 10px;
-}
-
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  font-style: none;
-  list-style: none;
-}
-
-.contact-list-item {
-  margin: 10px 20px 2px 0px;
-  font-style: none;
-  list-style: none;
-}
-
-.list-item {
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-size: 17px;
-  font-style: none;
-}
-/* --CONTACT */
-
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
-  .figure-article {
-    display: grid;
-    border-radius: 1rem;
-    overflow: hidden;
-    cursor: pointer;
-    /* max-height: 90%; */
-  }
-  .figure-article > * {
-    grid-area: 1/1;
-    transition: 0.4s;
-  }
-  .figure-article .figure-figcaption {
-    display: grid;
-    align-items: end;
-    font-family: sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0000;
-    padding: 0.75rem;
-    background: var(--c, #0009);
-    clip-path: inset(0 var(--_i, 100%) 0 0);
-    -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    -webkit-mask-clip: text, padding-box;
-    margin: -1px;
-  }
-  .figure-article:hover .figure-figcaption {
-    --_i: 0%;
-  }
-  .figure-article:hover img {
-    transform: scale(1.2);
-  }
-  @supports not (-webkit-mask-clip: text) {
-    .figure-article .figure-figcaption {
-      -webkit-mask: none;
-      color: #fff;
-    }
-  }
-
-  .about-me {
-    font-size: 30px;
-  }
-
-  .about-me-text {
-    font-size: 15px;
-  }
-
-  .contact {
-    margin: 50px 10% 20px 10%;
-  }
-
-  .contact-list {
-    flex-direction: column;
-  }
-
-  .contact-list-item {
-    margin: 5px 10px 1px 0px;
-  }
-
   .list-item {
     font-size: 15px;
   }
@@ -342,8 +163,6 @@ body {
 
   .nav-links {
     margin-top: 20px;
-    display: flex;
-    flex-direction: row;
   }
 
   .projects {
