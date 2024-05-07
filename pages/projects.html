@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
     <header class="header">
@@ -53,6 +54,13 @@
           <a href="/pages/experiments.html" class="nav-link">EXPERIMENTS</a>
           <a href="/pages/work.html" class="nav-link">WORK</a>
         </div>
+
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <script>
+          function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+          }
+        </script>
       </nav>
     </header>
     <main class="main">

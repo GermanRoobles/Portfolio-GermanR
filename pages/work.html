@@ -19,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
     <header class="header">
@@ -53,6 +53,13 @@
           <a href="/pages/experiments.html" class="nav-link">EXPERIMENTS</a>
           <a href="/pages/work.html" class="nav-link">WORK</a>
         </div>
+
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <script>
+          function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+          }
+        </script>
       </nav>
     </header>
     <main class="main">
@@ -64,7 +71,7 @@
           <p>😬</p>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact-work">
         <h3 class="h3-title">CONTACT</h3>
         <div class="contact-container">
           <ul class="contact-list">

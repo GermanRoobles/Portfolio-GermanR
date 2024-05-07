@@ -52,6 +52,31 @@
           <a href="/pages/experiments.html" class="nav-link">EXPERIMENTS</a>
           <a href="/pages/work.html" class="nav-link">WORK</a>
         </div>
+        <button onclick="toggleTheme()" id="themeToggleButton">
+          <svg id="themeIcon" width="24" height="24" viewBox="0 0 24 24">
+            <!-- Default moon icon; will change with theme -->
+            <path
+              d="M21,12.79V12a9,9,0,0,0-9-9V2a10,10,0,0,1,0,20v-1A9,9,0,0,0,21,12.79Z"
+            />
+          </svg>
+        </button>
+        <script>
+          function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            body.classList.toggle('light-theme');
+
+            if (body.classList.contains('light-theme')) {
+              // Sun icon for light theme
+              themeIcon.innerHTML =
+                '<path d="M12 22a1 1 0 0 1-1-1v-2a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm0-20a1 1 0 0 1-1-1V1a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm9 9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm-18 0H1a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm13.66 5.66a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 1.41-1.41l1.42 1.42a1 1 0 0 1 0 1.41zm-11.32 0a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 1.41-1.41l1.42 1.42a1 1 0 0 1 0 1.41zm11.32-11.32a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 1.41-1.41l1.42 1.42a1 1 0 0 1 0 1.41z"/>';
+            } else {
+              // Moon icon for dark theme
+              themeIcon.innerHTML =
+                '<path d="M21,12.79V12a9,9,0,0,0-9-9V2a10,10,0,0,1,0,20v-1A9,9,0,0,0,21,12.79Z"/>';
+            }
+          }
+        </script>
       </nav>
     </header>
     <main class="main">
@@ -134,6 +159,7 @@
         </div>
       </section>
     </main>
+
     <script src="/js/index.js"></script>
   </body>
 </html>

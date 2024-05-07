@@ -1,3 +1,35 @@
+/* Define base properties for dark theme */
+:root {
+  --background-color: #1f1f24;
+  --text-color: white;
+  --link-color: white;
+  --button-bg-color: grey;
+  --button-text-color: #fff;
+  --button-border-color: #fff;
+  --figcaption-bg-color: #0009;
+  --figcaption-text-color: #0000;
+  --h3-title-color: rgb(0, 255, 179);
+  --ttt-bg-color: grey;
+  --coming-soon-color: #fff;
+  --work-text-color: #fff;
+}
+
+/* Define properties for light theme */
+.light-theme {
+  --background-color: #f0f0f0;
+  --text-color: black;
+  --link-color: black;
+  --button-bg-color: white;
+  --button-text-color: black;
+  --button-border-color: black;
+  --figcaption-bg-color: #0009;
+  --figcaption-text-color: #0000;
+  --h3-title-color: rgb(0, 47, 255);
+  --ttt-bg-color: rgb(189, 189, 189);
+  --coming-soon-color: #000;
+  --work-text-color: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +38,8 @@
 }
 
 body {
-  background-color: #1f1f24;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* HEADER-- */
@@ -26,7 +59,7 @@ body {
   justify-self: center;
   align-items: center;
   align-self: center;
-  color: white;
+  color: var(--link-color);
 }
 
 .name {
@@ -35,29 +68,27 @@ body {
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
-  font-style: normal;
   font-size: 17px;
 }
 
 .nav-link {
   margin: 10px;
-  color: white;
+  color: var(--link-color);
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-size: 17px;
-  font-style: normal;
 }
 /* --HEADER */
 
 /* MAIN-- */
 .main {
-  color: white;
+  color: var(--text-color);
   margin-top: 100px;
 }
 
 .hero {
-  color: white;
+  color: var(--text-color);
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -102,7 +133,7 @@ body {
   font-weight: 900;
   font-size: 25px;
   font-style: normal;
-  color: rgb(0, 255, 179);
+  color: var(--h3-title-color);
 }
 
 .img-project {
@@ -126,9 +157,9 @@ body {
   font-family: sans-serif;
   font-size: 2.3rem;
   font-weight: bold;
-  color: #0000;
+  color: var(--figcaption-text-color);
   padding: 0.75rem;
-  background: var(--c, #0009);
+  background: var(--figcaption-bg-color);
   clip-path: inset(0 var(--_i, 100%) 0 0);
   -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -149,12 +180,16 @@ body {
 }
 
 .see-more {
-  color: white;
+  color: var(--link-color);
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-size: 17px;
   font-style: normal;
+}
+
+.comming-soon {
+  color: var(--coming-soon-color);
 }
 /* --PROJECTS */
 
@@ -179,7 +214,7 @@ body {
   border-radius: 10px;
   width: 300px;
   margin: 20px auto;
-  background-color: grey;
+  background-color: var(--ttt-bg-color);
 }
 
 #cellContainer {
@@ -200,21 +235,23 @@ body {
 #restartBtn {
   outline: none;
   cursor: pointer;
-  color: grey;
+  color: var(--button-text-color);
   padding: 1em;
   padding-left: 3em;
   padding-right: 3em;
-  border: 2px solid grey;
+  border: 2px solid var(--button-border-color);
   border-radius: 15px;
-  background-color: #fff;
-  box-shadow: 0 0 0 4px #fff, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  background-color: var(--button-bg-color);
+  box-shadow: 0 0 0 4px var(--button-bg-color),
+    2px 2px 4px 2px rgba(0, 0, 0, 0.5);
   transition: 0.1s ease-in-out, 0.4s color;
   margin-bottom: 15px;
 }
 
 #restartBtn:active {
   transform: translateX(0.1em) translateY(0.1em);
-  box-shadow: 0 0 0 4px #fff, 1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 4px var(--button-bg-color),
+    1.5px 1.5px 2.5px 1.5px rgba(0, 0, 0, 0.5);
 }
 
 /* EXPERIMENTS */
@@ -242,12 +279,16 @@ body {
 }
 
 .list-item {
-  color: white;
+  color: var(--link-color);
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-size: 17px;
   font-style: none;
+}
+
+.work-text {
+  color: var(--work-text-color);
 }
 /* --CONTACT */
 
@@ -270,9 +311,9 @@ body {
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #0000;
+    color: var(--figcaption-text-color);
     padding: 0.75rem;
-    background: var(--c, #0009);
+    background: var(--figcaption-bg-color);
     clip-path: inset(0 var(--_i, 100%) 0 0);
     -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
