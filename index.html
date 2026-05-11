@@ -1,165 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Germán Robles — desarrollo full stack y operación integral e-commerce (PHP, JavaScript, MySQL, React, Node.js). Fintech, SEO/SEM, Merchant Center. Las Rozas de Madrid."
+    />
+    <meta name="theme-color" content="#05060a" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Germán Robles — Full stack y e-commerce 360º</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <a href="/" class="logo">
-          <figure class="logo-figure">
-            <svg role="img" width="24" height="24" viewBox="0 0 24 24">
-              <circle
-                class="svg-circle"
-                r="12"
-                cx="12"
-                cy="12"
-                fill="var(--contrast)"
-              ></circle>
-              <circle
-                id="circle"
-                r="3"
-                cx="7.040461505236868"
-                cy="15.37682956617041"
-                fill="var(--base)"
-              ></circle>
-            </svg>
-            <figcaption class="name">
-              <b class="uppercase">German Robles</b>
-            </figcaption>
-          </figure>
-        </a>
-        <div class="nav-links">
-          <a href="/" class="nav-link">HOME</a>
-          <a href="/pages/projects.html" class="nav-link">PROJECTS</a>
-          <a href="/pages/experiments.html" class="nav-link">EXPERIMENTS</a>
-          <a href="/pages/work.html" class="nav-link">WORK</a>
-        </div>
-        <button onclick="toggleTheme()" id="themeToggleButton">
-          <svg id="themeIcon" width="24" height="24" viewBox="0 0 24 24">
-            <!-- Default moon icon; will change with theme -->
-            <path
-              d="M21,12.79V12a9,9,0,0,0-9-9V2a10,10,0,0,1,0,20v-1A9,9,0,0,0,21,12.79Z"
-            />
-          </svg>
-        </button>
-        <script>
-          function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('themeIcon');
-            body.classList.toggle('light-theme');
-
-            if (body.classList.contains('light-theme')) {
-              // Sun icon for light theme
-              themeIcon.innerHTML =
-                '<path d="M12 22a1 1 0 0 1-1-1v-2a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm0-20a1 1 0 0 1-1-1V1a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1zm9 9h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm-18 0H1a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm13.66 5.66a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 1.41-1.41l1.42 1.42a1 1 0 0 1 0 1.41zm-11.32 0a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 1.41-1.41l1.42 1.42a1 1 0 0 1 0 1.41zm11.32-11.32a1 1 0 0 1-1.41 0l-1.42-1.42a1 1 0 0 1 1.41-1.41l1.42 1.42a1 1 0 0 1 0 1.41z"/>';
-            } else {
-              // Moon icon for dark theme
-              themeIcon.innerHTML =
-                '<path d="M21,12.79V12a9,9,0,0,0-9-9V2a10,10,0,0,1,0,20v-1A9,9,0,0,0,21,12.79Z"/>';
-            }
-          }
-        </script>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="hero">
-        <h1 class="about-me">Hello, my name is German.</h1>
-        <h2 class="about-me-text">
-          I am a Junior Web Developer based in Madrid, Spain.
-          <br />Currently I'm studing at
-          <a class="opacity-80 underline" href="https://www.hackaboss.com"
-            >Hack A Boss</a
-          >
-          developing every day my skills.
-        </h2>
-      </section>
-      <section class="projects">
-        <h3 class="h3-title">PROJECTS</h3>
-        <section class="projects-grid">
-          <article class="outlet-pc">
-            <a href="https://github.com/GermanRoobles/Outlet-PC">
-              <figure class="figure-article">
-                <img class="img-project" src="../img/outlet-pc.png" alt="" />
-                <figcaption class="figure-figcaption">OUTLET PC</figcaption>
-              </figure>
-            </a>
-          </article>
-          <article class="blog-viajes">
-            <a href="https://github.com/crisky94/ProyectoBlogViajes">
-              <figure class="figure-article">
-                <img class="img-project" src="./img/wanderlust.png" alt="" />
-                <figcaption class="figure-figcaption">WANDERLUST</figcaption>
-              </figure>
-            </a>
-          </article>
-        </section>
-        <a class="see-more" href="/pages/projects.html">See More -></a>
-      </section>
-      <section class="experiments">
-        <h3 class="h3-title">EXPERIMENTS</h3>
-        <div id="gameContainer">
-          <h1 class="experiment-title">Tic Tac Toe</h1>
-          <div id="cellContainer">
-            <div cellIndex="0" class="cell"></div>
-            <div cellIndex="1" class="cell"></div>
-            <div cellIndex="2" class="cell"></div>
-            <div cellIndex="3" class="cell"></div>
-            <div cellIndex="4" class="cell"></div>
-            <div cellIndex="5" class="cell"></div>
-            <div cellIndex="6" class="cell"></div>
-            <div cellIndex="7" class="cell"></div>
-            <div cellIndex="8" class="cell"></div>
-          </div>
-          <h2 id="statusText"></h2>
-          <button id="restartBtn">Restart</button>
-        </div>
-
-        <a class="see-more" href="/pages/experiments.html">See More -></a>
-      </section>
-      <section class="contact">
-        <h3 class="h3-title">CONTACT</h3>
-        <div class="contact-container">
-          <ul class="contact-list">
-            <li class="contact-list-item">
-              <a class="list-item" href="https://github.com/GermanRoobles"
-                >GitHub</a
-              >
-            </li>
-            <li class="contact-list-item">
-              <a
-                class="list-item"
-                href="https://www.linkedin.com/in/germanrobleslopez/"
-                >LinkedIn</a
-              >
-            </li>
-            <li class="contact-list-item">
-              <a class="list-item" href="mailto:germanroobles@gmail.com"
-                >Email</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <script src="/js/index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

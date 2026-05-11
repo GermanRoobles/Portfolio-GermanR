@@ -1,0 +1,149 @@
+/* Móvil y safe areas: evita desbordes y mejora toques */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+#root,
+.layout,
+.layout__main {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.section__inner,
+.site-header__inner,
+.site-footer {
+  padding-left: max(1rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+.site-footer {
+  padding-bottom: max(2rem, env(safe-area-inset-bottom, 0px));
+}
+
+.hero {
+  padding-left: max(1rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+.hero__actions {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__actions .btn {
+  width: 100%;
+  min-height: 48px;
+}
+
+@media (min-width: 520px) {
+  .hero__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: none;
+    width: auto;
+  }
+
+  .hero__actions .btn {
+    width: auto;
+    min-height: 44px;
+  }
+}
+
+.btn {
+  min-height: 44px;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.35rem;
+  min-height: 44px;
+}
+
+.site-logo__text {
+  max-width: min(46vw, 12rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 400px) {
+  .site-logo__text {
+    max-width: none;
+    white-space: normal;
+    overflow: visible;
+  }
+}
+
+.site-footer__inner {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .site-footer__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+  }
+}
+
+.site-footer__stack {
+  flex: 0 1 auto;
+  order: 0;
+}
+
+.glass-card,
+.skill-card,
+.radar-card,
+.timeline-card,
+.edu-card,
+.cert-card,
+.lang-list {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.glass-card--inline {
+  flex-wrap: wrap;
+}
+
+.contact-actions {
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .contact-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+}
+
+.contact-actions .btn {
+  flex: 1 1 auto;
+  min-width: min(100%, 12rem);
+}
+
+@media (min-width: 480px) {
+  .contact-actions .btn {
+    flex: 0 1 auto;
+    min-width: auto;
+  }
+}
